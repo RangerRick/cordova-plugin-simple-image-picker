@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="cordova-plugin-simple-image-picker"
+  version="0.1.0">
+
+    <name>Cordova Simple Image Picker</name>
+    <description>A simple alternative to the cordova-camera-plugin for choosing an image.</description>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/image-picker.js" name="ImagePicker">
+        <clobbers target="ImagePicker" />
+        <clobbers target="window.plugins.ImagePicker" />
+    </js-module>
+
+    <dependency id="cordova-plugin-file" url="https://github.com/apache/cordova-plugin-file.git" />
+
+    <!--android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ImagePickerPlugin">
+                <param name="android-package" value="com.raccoonfink.imagepicker.ImagePickerPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/com/raccoonfink/imagepicker/ImagePickerPlugin.java" target-dir="src/com/raccoonfink/imagepicker/" />
+    </platform>
+</plugin>
