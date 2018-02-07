@@ -1,0 +1,23 @@
+{
+  "name": "cordova-plugin-simple-image-picker",
+  "version": "0.1.0",
+  "description": "Simple Image Picker for Android",
+  "cordova": {
+    "id": "cordova-plugin-simple-image-picker",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RangerRick/cordova-plugin-simple-image-picker"
+  },
+  "keywords": [
+    "cordova",
+    "file",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Benjamin Reed <rangerrick@befunk.com>",
+  "license": "Apache 2.0"
+}
